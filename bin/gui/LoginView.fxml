@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginViewController">
+   <center>
+      <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="520.0" style="-fx-border-color: black; -fx-background-color: #D3D3D3;" BorderPane.alignment="CENTER">
+         <header>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Login Admin">
+               <font>
+                  <Font name="BebasNeue" size="35.0" />
+               </font>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </Label>
+         </header>
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.4000244140625" minWidth="10.0" prefWidth="114.20001220703125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="373.39996337890625" minWidth="10.0" prefWidth="363.79998779296875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Login:">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label text="Senha:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtLogin" alignment="CENTER" prefHeight="45.0" promptText="example@example.com" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="pswTxtSenha" alignment="CENTER" prefHeight="45.0" promptText="example123" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="90.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Button fx:id="btLogin" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onBtLogin" prefHeight="40.0" prefWidth="120.0" text="Login">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="labelErrorLoginOrSenha" nodeOrientation="LEFT_TO_RIGHT" text="Mensagem de erro aqui" textFill="RED">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </content>
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin>
+      </DialogPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="130.0" prefWidth="900.0" spacing="10.0" style="-fx-background-color: #00BFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Biblioteca Livro Companheiro">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label text="Sistema desenvolvido por/ Dev João Junio">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow height="64.28" radius="39.535" width="95.86" />
+         </effect>
+      </VBox>
+   </top>
+</BorderPane>
